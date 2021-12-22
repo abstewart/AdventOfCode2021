@@ -1,0 +1,9 @@
+def deepIntersection(r1 r2):
+    if intersect(r1, r2):
+        tmp = findDirectIntersection(r1, r2)
+        for a in r1.adj:
+            if deepIntersection(a,tmp):
+                return True
+        return 
+    else:
+        return False

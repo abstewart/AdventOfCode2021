@@ -1,0 +1,14 @@
+Thinking for day 22 pt 2:
+
+Each line in the input corresponds to a region, stored as a tuple: (onoff,x1,x2,y1,y2,z1,z2,adjust)
+onoff is True if on, False if off. The rest are ints
+
+Go through the regions:
+if a region doesn't intersect any other region and it is 'on',
+   add the region tuple to the reactor (adjust is 0)
+
+if a region is on and intersects with another region in the reactor that's on:
+   remove the intersecting region and add the reactor (iteratively, i.e. search for another region first)
+   May need to rethink this
+
+if a region is on and intersects with another region in the reactor that's off
